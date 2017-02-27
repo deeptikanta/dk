@@ -1,0 +1,7 @@
+<div  class="container" ng-controller="HomeCtrl as ctrl" >
+<div id="logo" >
+            <img alt="music" src="image\\m.jpg" width="60px" height="60px" /></div>
+    <div id="title"><h1 class="login"><b>{{ 'TITLE' | translate }}</b></h1>
+        <select style="margin-left: -100px;" ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()">
+        </select></div>
+</div>

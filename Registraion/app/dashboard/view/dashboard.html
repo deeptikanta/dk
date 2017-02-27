@@ -1,0 +1,97 @@
+<div>
+        <div class="style2">
+        <ul class=main>
+            <li ng-repeat="x in option" style="cursor: pointer"><a  ng-click="click(x.num)">{{x.name}}</a>
+              <ul ng-show={{x.var}}>
+                  <li class="style3" ng-repeat="y in x.values" ng-click="click(y.subnum)">{{y.sub}}</li>
+              </ul>
+            </li>
+        </ul>
+        </div>
+
+        <div class="style">
+        <div  ng-show='value1' class="page" >
+
+
+            <table>
+                <tr><th>Email</th><th>password</th><th>gender</th><th>first name</th><th>last name</th><th>ph no</th><th>edit/delete</th></tr>
+                <tr ng-repeat='user in users'>
+                    <td>{{user.email}}</td>
+                    <td>{{user.password1}}</td>
+                    <td>{{user.gender1}}</td>
+                    <td>{{user.fname}}</td>
+                    <td>{{user.lname}}</td>
+                    <td>{{user.phno}}</td>
+                    <td><div><button class="button" ng-click="edit(user._id)" data-toggle="modal" data-target="#myModal">edit</button>
+                    <button class="button" ng-click="remove(user)">delete</button></div></td>
+                </tr>
+            </table>
+        </div>
+        <div  ng-show='value2' class="page" style="background-color: rgb(54,63,78);color:rgb(178,203,244)"  data-ng-controller="UploadController" >
+            <div style="width:22%;height: 100%">
+                <div >
+                    <img  style="width:50%;height:396px;border: 0px "ng-src="{{imageSrc}}"  >
+                </div>
+            </div>
+
+
+
+
+            <div style="width:70%;float: right;margin-top:-594px;">
+                    <p style="text-align:left;font-size: 20px; ">reference slide</p>
+                   <input style="width: 40%;background-color:rgb(54,63,78);color:rgb(178,203,244); "  type="file" ng-file-select="onFileSelect($files)" accept="image/*">
+                    <p  style="text-align:left;font-size: 20px;">retrive barcode</p>
+                      <p ng-model="name"  style="text-align:left;font-size: 20px;margin-left:-550px; color:white;margin-left: 5px">{{name}}</p>
+
+                <div style="margin-top:-60px;">
+                <p>separator</p>
+                <p> _</p> </div>
+                </div>
+            <hr style="color: #444444">
+            <div style="width:70%;margin-top:-420px;float: right">
+               <p style="text-align:left;font-size: 20px;">select fields for new barcode</p><br>
+                <div class="test" >
+                    <div ng-repeat="items in chunkedData" ng-class="{right:$odd}" class="common">
+                        <div ng-repeat="item in items">
+                            <input  type="checkbox"   ng-click="cl(item)">{{item}}
+                            </div>
+
+
+                </div>   </div>
+                    <div style="margin-left: -840px;margin-top: 25px" >
+                        <select ng-model="sign"  ng-mouseup="ff()" style="background-color:rgb(54,63,78);">
+                        <option value="?">?</option>
+                        <option value="!">!</option>
+                        <option value="@">@</option>
+                        <option value="#">#</option>
+                        <option value="$">$</option>
+                        <option value="%">%</option>
+                        <option value="^">^</option>
+                        <option value="*">*</option>
+                        <option value="_">_</option>
+                    </select></div>
+         </div>
+            <div style="margin-top: -236px; margin-left: -445px;"><p>preview</p><br></div>
+            <div class="dddddd" style="margin-left: 280px;">
+                <div style="text-align:left;font-size: 20px;margin-left:-550px; color:rgb(178,203,244);margin-left: 5px" ng-show="myvar" ng-repeat="x in values track by $index">
+                    <p class="in10" >{{x}}</p>
+                </div>
+                <ul class = "sortable-1" style="text-align:left;font-size: 20px;margin-left:-550px; color:rgb(178,203,244);margin-left: 5px">
+                    <li ng-repeat="x in name2 track by $index"  style="float: left" ng-show="myvar1">
+                        <div id="mydiv"  style="float: left;border: 2px solid black;width:60px">{{x}}</div>
+                        <div class="demo"  style="float: left;border: 2px solid black;">{{sign}}</div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div  ng-show='value3' class="page" >Page three</div>
+        <div  ng-show='value4' class="page">Page one</div>
+        <div  ng-show='value5' class="page" >Page two</div>
+        <div  ng-show='value6' class="page">Page three</div>
+        <div  ng-show='value7' class="page" >Page one</div>
+        <div  ng-show='value8' class="page" >Page two</div>
+        <div  ng-show='value9' class="page">Page three</div>
+
+
+</div></div>

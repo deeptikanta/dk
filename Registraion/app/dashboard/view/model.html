@@ -1,0 +1,9 @@
+<div style="text-align: center" >
+
+    <input type="text"  ng-model="user.fname"  class="register-input" placeholder="first name">
+    <input  type="email"  ng-model="user.email"  class="register-input" placeholder="email">
+    <input type="password"  ng-model="user.password1"  class="register-input" placeholder="password">
+    <input   type="text"  ng-model="user.lname"  class="register-input" placeholder="last name">
+    <input type="number"  ng-model="user.phno"  class="register-input" placeholder="phone number">
+    <button style="text-align:center" class="button"  ng-click="update(user)"  ng-if="user._id" type="submit">update</button>
+</div>

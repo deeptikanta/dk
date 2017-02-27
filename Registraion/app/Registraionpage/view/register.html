@@ -1,0 +1,45 @@
+
+ <div class="reg">
+<h1 class="register-title">{{ 'TITLE' | translate }}</h1>
+<form class="register" name="register">
+    <div class="register-switch">
+        <input type="radio" ng-model="user.gender1" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+        <label for="sex_f" class="register-switch-label">Female</label>
+        <input type="radio" ng-model="user.gender1" name="sex" value="M" id="sex_m" class="register-switch-input">
+        <label for="sex_m" class="register-switch-label">Male</label>
+    </div>
+
+    <input type="text" name="fname" ng-model="user.fname"  class="register-input" placeholder="first name" required />
+    <span ng-show="register.fname.$touched && register.fname.$invalid">The name is required.</span>
+
+
+    <input type="text" name="lname" ng-model="user.lname" class="register-input" placeholder="last name" required />
+    <span ng-show="register.lname.$touched && register.lname.$invalid">The field is required.</span>
+
+    <input type="email" name="email" ng-model="user.email" class="register-input" placeholder="Email address" required />
+    <span ng-show=" register.email.$dirty && register.email.$invalid">Email Address is not valid</span>
+
+    <input type="number" name="phno" ng-model="user.phno" class="register-input"  ng-minlength="10"
+           ng-maxlength="10" placeholder="phone number" ng-required="true" />
+    <span class="help-block"
+          ng-show="register.phno.$error.required &&
+                     register.phno.$error.number">
+                     Valid phone number is required
+      </span>
+     <span class="help-block"
+           ng-show="((register.phno.$error.minlength ||
+                           register.phno.$error.maxlength) &&
+                           register.phno.$dirty)">
+                           phone number should be 10 digits
+            </span>
+
+    <input type="password" name="password" ng-model="password" class="register-input" placeholder="Password" required />
+    <input type="password" name="password1"  ng-model="user.password1" class="register-input" placeholder=" confirm Password" ng-required/>
+    <div ng-show="register.password1.$viewValue != '' && (register.password1.$viewValue != register.password.$viewValue)">Fields do not match!</div>
+
+
+    <button type="submit" ng-click="submit(user)" ng-class="button1" ng-style="customStyle.style" data-ng-disabled="checkQuestions(password,user.password1)" class="register-button">Create Account</button>
+</form> </div>
+
+
+

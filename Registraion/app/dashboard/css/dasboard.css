@@ -1,0 +1,88 @@
+.style{
+    width: 86.5%;
+    margin-top: -122px;
+    float: right;
+    height: 600px ;
+
+}
+.style2{
+
+    background-color: white;
+    padding-left: 31px;
+    width: 11%;
+    margin-top: -68px;
+}
+.style3
+{
+    padding-left: 10px;
+    color: #a94442;
+
+
+}
+.page{
+    background-color: white;
+    height: inherit;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 10px;
+}
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.right{
+
+    margin-left: 10%;
+
+}
+.common{
+    display: inline-block;
+}
+
+.test{
+    margin-left: -450px;
+}
+.in1{
+    float: left;
+    display: inline-block;
+    width: 8%;
+    padding: 0px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px black solid;
+    background-color:#333;
+    height: 25px;
+}
+.in10{
+    float: left;
+    display: inline-block;
+    width: 10%;
+    padding: 0px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.thumbnail {
+
+    border-radius: 0px;
+    text-align: center;
+    padding: 0px;
+    float: left;
+    border: 2px solid rgb(37, 92, 146);
+    margin-top: 10px;
+
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    cursor: pointer;
+    background: rgb(76, 85, 100);
+}
+
+
+.sortable-1 li:last-child .demo{
+    display: none;
+}
+
+

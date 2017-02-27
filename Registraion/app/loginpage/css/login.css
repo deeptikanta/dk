@@ -1,0 +1,39 @@
+.div{
+    border: 1px solid oldlace ;
+    width: 27%;
+   margin-left: 483px;
+    height: 261px;
+    background-color: #f5f5f5;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.39);
+}
+#para
+{
+    color: lightblue;
+    text-align: center;
+}
+#div2{
+    padding: 9px;
+    text-align: center;
+
+}
+input{
+    padding: 11px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+      width: 85px;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+  .last{
+      margin-top: 0px;
+  }

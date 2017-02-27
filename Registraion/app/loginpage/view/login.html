@@ -1,0 +1,29 @@
+
+
+        <div class="div">
+            <p id="para">Sign in to continue</p>
+            <div id="div2">
+
+                <tr>
+                    <div>
+                        <form name="res">
+                            <td><input type="email" name="email"
+                                       placeholder="enter emailid" ng-model="mail" required="required"
+                                       autofocus="autofocus"></td> <br>
+                            <span ng-show=" res.email.$dirty && res.email.$invalid">Email Address is not valid</span><br> <br>
+                            <td><input type="password" ng-model="password"
+                                       placeholder="enter password" required="required"
+                                       autofocus="autofocus"></td> <br>
+
+                            <td><br>
+                                <div class="last">
+                                    <span  ng-style="customStyle1.style1" ng-show="myVar">invalid user name or password</span>
+                               <div> <button class="button" type="submit"  ng-click="submit(mail,password)">login</button>
+
+                                <button class="button" ng-click="reg()">New user</button><br></div> </div>
+                        </form>
+                    </div>
+                </tr>
+            </div>
+        </div>
+
